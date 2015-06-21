@@ -6,158 +6,99 @@ _  ___ |_ |/ |/ /__ |/ |/ /     _  ___ |_  /_/ /_  /_/ /(__  )
 /_/  |_|___/|__/ ____/|__/      /_/  |_|  .___/_  .___//____/  
                                        /_/     /_/             
 */
-
 /*////////////////////////////////////////////////////////////////////////////*/
 /*                                   IMPORTS                                  */
 /*////////////////////////////////////////////////////////////////////////////*/
-
 /* Fonts */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
-
 /*////////////////////////////////////////////////////////////////////////////*/
 /*                       SASS VARS, MIXINS AND FUNCTIONS                      */
 /*////////////////////////////////////////////////////////////////////////////*/
-
-@mixin centerWithWidth($width) {
-	display: block;
-	margin: 0 auto;
-	max-width: $width;
-}
-
-@mixin center {
-	display: block;
-	margin: 0 auto;
-}
-
-@mixin font-smoothing($value: on) {
-    @if $value == on {
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    @else {
-        -webkit-font-smoothing: subpixel-antialiased;
-        -moz-osx-font-smoothing: auto;
-    }
-}
-
-$duration: 0.2s;
-
 /*////////////////////////////////////////////////////////////////////////////*/
 /*                                   RESET                                    */
 /*////////////////////////////////////////////////////////////////////////////*/
-
 * {
-    margin: 0;
-    padding: 0;
-}
+  margin: 0;
+  padding: 0; }
 
 /*////////////////////////////////////////////////////////////////////////////*/
 /*                                    FONT                                    */
 /*////////////////////////////////////////////////////////////////////////////*/
-
 body {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;
-}
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300; }
 
 a {
-	text-decoration: none;
-}
+  text-decoration: none; }
 
 /*////////////////////////////////////////////////////////////////////////////*/
 /*                                     BUTTON                                 */
 /*////////////////////////////////////////////////////////////////////////////*/
-
-
-
 .button {
-    text-align: center;
-    color: #fff;
-    display: block;
-    transition: background-color $duration;
-}
-
-@mixin buttonWidthAndColor($buttonWidth, $buttonColor) {
-	background: $buttonColor;
-    width: $buttonWidth;
-    height: $buttonWidth;
-    line-height: $buttonWidth;
-	&:hover {
-		background-color: darken($buttonColor, 20%);
-	}
-}
+  text-align: center;
+  color: #fff;
+  display: block;
+  transition: background-color 0.2s; }
 
 /*////////////////////////////////////////////////////////////////////////////*/
 /*                                     GRID                                   */
 /*////////////////////////////////////////////////////////////////////////////*/
-
 .grid-2 {
-	.gridMember:nth-child(1) {
-		float: left;
-	}
-	.gridMember:nth-child(2) {
-		float: right;
-	}
-	overflow: hidden;
-}
+  overflow: hidden; }
+  .grid-2 .gridMember:nth-child(1) {
+    float: left; }
+  .grid-2 .gridMember:nth-child(2) {
+    float: right; }
 
 .grid-3 {
-	.gridMember:nth-child(1) {
-		float: left;
-	}
-	.gridMember:nth-child(2) {
-		float: left;
-	}
-	.gridMember:nth-child(3) {
-		float: left;
-	}
-	overflow: hidden;
-}
+  overflow: hidden; }
+  .grid-3 .gridMember:nth-child(1) {
+    float: left; }
+  .grid-3 .gridMember:nth-child(2) {
+    float: left; }
+  .grid-3 .gridMember:nth-child(3) {
+    float: left; }
 
 /*////////////////////////////////////////////////////////////////////////////*/
 /*                                    HEADER                                  */
 /*////////////////////////////////////////////////////////////////////////////*/
-
 #header {
-    height: 700px;
-    background-color: #DAD8D8;
-    img {
-        width: 100px;
-        margin: 30px;
-    }
-    #vertical-align {
-        float: right;
-        margin: 30px;
-    }
-    .button {
-        margin-bottom: 20px;
-        @include buttonWidthAndColor(70px, #666666);
-        font-size: 26px;
-    }
-}
+  height: 700px;
+  background-color: #DAD8D8; }
+  #header img {
+    width: 100px;
+    margin: 30px; }
+  #header #vertical-align {
+    float: right;
+    margin: 30px; }
+  #header .button {
+    margin-bottom: 20px;
+    background: #666666;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 26px; }
+    #header .button:hover {
+      background-color: #333333; }
 
 /*////////////////////////////////////////////////////////////////////////////*/
 /*                                     APPS                                   */
 /*////////////////////////////////////////////////////////////////////////////*/
-
 #apps {
-    background-color: #FD6ACB;
-    padding: 50px 0;
-    img {
-        width: 120px;
-        border-radius: percentage(10 / 57);
-    }
-    a {
-        transition: opacity $duration;
-        &:hover {
-		  opacity: 0.8;
-	   }
-    }
-    .grid-3 {
-		@include center;
-		width: 800px;
-	}
-	.gridMember {
-		width: (100% / 3);
-	}
-}
+  background-color: #FD6ACB;
+  padding: 50px 0; }
+  #apps img {
+    width: 120px;
+    border-radius: 17.54386%; }
+  #apps a {
+    transition: opacity 0.2s; }
+    #apps a:hover {
+      opacity: 0.8; }
+  #apps .grid-3 {
+    display: block;
+    margin: 0 auto;
+    width: 800px; }
+  #apps .gridMember {
+    width: 33.33333%; }
+
+/*# sourceMappingURL=screen.css.map */
