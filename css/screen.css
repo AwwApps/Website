@@ -66,7 +66,9 @@ a {
   height: 700px;
   background-color: #DAD8D8;
   background-image: url(../images/background.svg);
-  background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom; }
   #header img {
     width: 100px;
     margin: 30px; }
