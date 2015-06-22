@@ -124,7 +124,7 @@ a {
 	background-image: url(../images/background.svg);
 	background-size: cover;
 	background-repeat:no-repeat;
-    background-position:center center;
+    background-position: center center;
     img {
         width: 100px;
         margin: 30px;
@@ -152,9 +152,11 @@ a {
         border-radius: percentage(10 / 57);
     }
     a {
-        transition: opacity $duration;
+        transition: -webkit-filter $duration, filter $duration;
         &:hover {
-		  opacity: 0.8;
+		  //opacity: 0.8;
+		  -webkit-filter: brightness(70%);
+		  filter: brightness(70%);
 	   }
     }
     .grid-3 {
