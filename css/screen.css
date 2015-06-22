@@ -64,7 +64,9 @@ a {
 /*////////////////////////////////////////////////////////////////////////////*/
 #header {
   height: 700px;
-  background-color: #DAD8D8; }
+  background-color: #DAD8D8;
+  background-image: url(../images/background.svg);
+  background-size: cover; }
   #header img {
     width: 100px;
     margin: 30px; }
