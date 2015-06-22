@@ -57,7 +57,7 @@ $duration: 0.2s;
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;
+    font-weight: 200;
 }
 
 a {
@@ -72,7 +72,7 @@ a {
 
 .button {
     text-align: center;
-    color: #fff;
+    color: white;
     display: block;
     transition: background-color $duration;
 }
@@ -142,9 +142,9 @@ a {
 
 #apps {
     background-color: #FD6ACB;
-    padding: 50px 0;
+    padding: 70px 0;
     img {
-        width: 120px;
+        @include centerWithWidth(120px);
         border-radius: percentage(10 / 57);
     }
     a {
@@ -154,10 +154,52 @@ a {
 	   }
     }
     .grid-3 {
-		@include center;
-		width: 800px;
+		@include centerWithWidth(800px);
+
 	}
 	.gridMember {
-		width: (100% / 3);
+        width: (100% / 3);
+	}
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                                    BLOG                                    */
+/*////////////////////////////////////////////////////////////////////////////*/
+
+#blog {
+	background-color: #FC6769;
+	padding: 50px 0;
+	transition: opacity $duration;
+	a {
+		font-size: 50px;
+		color: white;
+		&:hover {
+		  opacity: 0.7;
+	   }
+	}
+}
+
+/*////////////////////////////////////////////////////////////////////////////*/
+/*                                     ABOUT                                  */
+/*////////////////////////////////////////////////////////////////////////////*/
+
+#about {
+	background-color: #666666;
+	color: white;
+	padding: 80px 0;
+	p {
+		font-size: 32px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.button {
+        @include buttonWidthAndColor(50px, #CCCCCC);
+        font-size: 20px;
+    }
+	.twitter {
+		@include buttonWidthAndColor(50px, #23CDFD);
+	}
+	.grid-2 {
+		@include centerWithWidth(120px);
 	}
 }
